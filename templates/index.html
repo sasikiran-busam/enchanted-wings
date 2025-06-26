@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block title %}Home | Butterfly Classifier{% endblock %}
+{% block content %}
+
+<!-- Hero Section -->
+<div class="hero-section d-flex align-items-center justify-content-center text-white text-center">
+  <div>
+    <h1 class="display-4 fw-bold text-dark">🦋 Enchanted Wings</h1>
+<p class="lead text-dark">Discover butterfly species using AI</p>
+
+    <a href="#upload" class="btn btn-light btn-lg mt-3">Get Started</a>
+  </div>
+</div>
+
+<!-- Upload Section (transparent) -->
+<div class="container py-5" id="upload">
+  <div class="upload-box glass text-white mx-auto" style="max-width: 600px;">
+    <h2 class="mb-4 text-center">Upload a Butterfly Image</h2>
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+      <div class="mb-3">
+        <input class="form-control" type="file" name="file" required>
+      </div>
+      <div class="d-grid">
+        <button class="btn btn-light">Predict</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+{% endblock %}

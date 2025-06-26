@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}Contact | Butterfly Classifier{% endblock %}
+{% block content %}
+<h2>Contact Us</h2>
+<p>If you have any feedback or suggestions, feel free to contact us!</p>
+
+<form method="POST">
+  <div class="mb-3">
+    <label>Name</label>
+    <input type="text" name="name" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label>Email</label>
+    <input type="email" name="email" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label>Message</label>
+    <textarea name="message" class="form-control" rows="5" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-success">Send Message</button>
+</form>
+{% endblock %}
+{% if success %}
+  <div class="alert alert-success">Thank you for your message! We'll get back to you soon.</div>
+{% endif %}
